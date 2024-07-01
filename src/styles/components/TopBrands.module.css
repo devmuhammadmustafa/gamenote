@@ -1,0 +1,26 @@
+.topBrands {
+  .self {
+    @apply pt-[50px] pb-[37px] relative after:absolute after:w-full after:h-[1px] after:bottom-0 after:left-0 before:left-0 before:absolute before:w-full before:h-[1px] before:top-0;
+
+    .slider {
+      @apply relative w-[calc(100%-140px)] m-auto;
+
+      .link {
+        opacity: 0.7;
+        .image {
+          @apply max-h-[57px] m-auto max-w-[160px];
+        }
+      }
+
+      .view {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+.prevButton {
+  @apply absolute -left-[70px] top-1/2 -translate-y-1/2 z-[2];
+}
+.nextButton {
+  @apply absolute -right-[70px] top-1/2 -translate-y-1/2 z-[2];
+}

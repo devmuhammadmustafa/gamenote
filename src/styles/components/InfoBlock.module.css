@@ -1,0 +1,23 @@
+.infoBlock{
+  @apply py-14;
+
+  .self{
+    @apply relative flex max-[992px]:flex-wrap after:absolute after:w-full after:h-[1px] after:-bottom-14 after:left-0 before:left-0 before:absolute before:w-full before:h-[1px] before:-top-14 -m-[10px];
+
+    .card{
+      @apply w-[calc(25%-15px)] max-[992px]:w-[calc(50%-20px)] max-[450px]:w-full rounded-[30px] px-[20px] py-[35px] m-[10px];
+
+      .icon{
+        @apply text-[48px] h-[51px] max-[550px]:text-[35px] flex items-center justify-center mb-2;
+      }
+
+      .title{
+        @apply font-semibold text-[16px] max-[550px]:text-[14px] mb-[6px] text-center leading-normal;
+      }
+
+      .description{
+        @apply text-center text-[12px];
+      }
+    }
+  }
+}

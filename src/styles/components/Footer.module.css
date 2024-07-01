@@ -1,0 +1,88 @@
+.footer{
+  @apply pt-[50px];
+
+  .footerComponent{
+    @apply p-[20px] pt-[21px] rounded-[30px];
+
+    .footerTop{
+      @apply flex max-[1200px]:flex-wrap relative justify-between max-[1200px]:justify-start pb-[24px] relative after:absolute after:w-[calc(100%+40px)] after:h-[1px] after:bg-[#D9D9D9] after:-left-[20px] after:bottom-0;
+
+      .left{
+        @apply text-[162px] w-[220px] max-[1200px]:pr-[50px] max-[992px]:w-full max-[992px]:pr-0 max-[992px]:pb-[30px];
+
+        .description{
+          @apply text-[12px] mt-[20px];
+        }
+      }
+
+      .center{
+        @apply flex max-[992px]:flex-wrap max-[600px]:block max-[600px]:w-full max-[600px]:columns-2;
+
+        .list{
+          @apply flex flex-col pr-[37px] last:pr-0 max-[992px]:mb-[20px];
+          -moz-column-break-inside: avoid;
+          break-inside: avoid;
+
+          .topLink{
+            @apply text-[14px] hover:text-green-hover font-medium mb-[14px];
+          }
+
+          .mainLink{
+            @apply text-[#A5A5A5] hover:text-green text-[12px] font-medium mb-[14px] last:mb-0;
+          }
+        }
+      }
+
+      .right{
+        @apply flex max-[1200px]:w-full max-[1050px]:pt-[80px] max-[700px]:pt-[150px] max-[700px]:flex-row-reverse;
+      }
+
+      .right > div:first-child{
+        @apply max-[700px]:mr-0 max-[700px]:ml-[10px]
+      }
+      .right > div:last-child{
+        @apply max-[700px]:flex-1;
+      }
+
+      .contactBottom{
+        @apply absolute bottom-[24px] right-[20px] max-[700px]:bottom-[90px] max-[700px]:w-full;
+
+        .contactItems{
+          @apply flex pl-[30px] pb-[22px] max-[700px]:w-full max-[700px]:justify-center max-[700px]:pl-[20px];
+        }
+
+        .contactItems a:after{
+          @apply max-[700px]:-right-[14px] max-[700px]:bg-cover max-[700px]:bg-no-repeat max-[700px]:bg-center max-[700px]:h-[12px] max-[700px]:w-[6px];
+        }
+
+        .socialIcons{
+          @apply flex items-center justify-end max-[700px]:justify-center max-[700px]:pl-[20px];
+        }
+        .socialIcons a{
+          @apply font-medium block ml-[10px] text-[15px];
+        }
+        .socialIcons span{
+          @apply font-medium max-[600px]:text-[12px];
+        }
+      }
+    }
+
+    .copyright{
+      @apply flex items-center justify-between pt-[20px] max-[650px]:flex-wrap max-[650px]:justify-center;
+
+      .left{
+        @apply text-[12px] text-[#A5A5A5] max-[650px]:w-full max-[650px]:flex max-[650px]:justify-center max-[650px]:pb-[15px];
+      }
+
+      .right{
+        @apply flex items-center max-[650px]:w-full max-[650px]:flex max-[650px]:justify-center;
+      }
+      .right span{
+        @apply text-[12px] text-[#A5A5A5] block mr-[10px]
+      }
+      .right img{
+        @apply w-[75px]
+      }
+    }
+  }
+}

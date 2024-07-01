@@ -1,0 +1,77 @@
+.inputText {
+  @apply pb-[10px] relative;
+
+  .label {
+    @apply block w-full text-[12px] leading-normal font-medium pb-[4px];
+  }
+
+  .input {
+    @apply h-[48px] text-black border border-[#a5a5a5] w-full outline-0 rounded-[50px] text-[14px] placeholder-[#A5A5A5] font-medium px-[20px] transition focus:border-green disabled:bg-[#D9D9D9] disabled:border-[#D9D9D9] disabled:pointer-events-none;
+
+    &.error {
+      @apply border-red;
+    }
+  }
+
+  .icon {
+    @apply absolute right-[20px] top-[36px];
+  }
+
+  .errorText {
+    @apply text-red font-medium text-[12px];
+  }
+}
+.formSelect {
+  @apply pb-[10px];
+
+  .label {
+    @apply block w-full text-[12px] leading-normal font-medium pb-[4px];
+  }
+
+  .input {
+    @apply h-[48px] text-black border border-[#a5a5a5] w-full outline-0 rounded-[50px] text-[14px] placeholder-[#A5A5A5] font-medium px-[20px] transition focus:border-green;
+
+    &.error {
+      @apply border-red;
+    }
+  }
+
+  .errorText {
+    @apply text-red font-medium text-[12px];
+  }
+}
+.textareaPart {
+  @apply pb-[10px] w-full;
+
+  .label {
+    @apply block w-full text-[12px] leading-normal font-medium pb-[4px];
+  }
+
+  .textarea {
+    @apply h-[157px] py-[15px] resize-none px-[20px] text-black border border-[#a5a5a5] w-full outline-0 rounded-[24px] text-[14px] placeholder-[#A5A5A5] font-medium px-[20px] transition focus:border-green;
+
+    &.error {
+      @apply border-red;
+    }
+  }
+
+  .errorText {
+    @apply text-red font-medium text-[12px];
+  }
+}
+
+.inputCheckbox {
+  @apply flex items-center;
+
+  .input {
+    @apply appearance-none;
+  }
+
+  .label {
+    @apply text-[12px] leading-normal block pl-[20px] cursor-pointer select-none relative before:transition before:absolute before:w-[15px] before:h-[15px] before:border before:rounded-[4px] before:top-1/2 before:-translate-y-1/2 before:left-0;
+  }
+
+  .input:checked + .label {
+    @apply before:bg-green before:border-green before:outline-0 before:bg-no-repeat before:bg-cover before:transition before:bg-[length:10px_10px] before:bg-center;
+  }
+}

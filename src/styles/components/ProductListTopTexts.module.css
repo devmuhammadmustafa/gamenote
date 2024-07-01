@@ -1,0 +1,7 @@
+.productListTopTexts{
+  @apply pb-[30px];
+
+  .title{
+    @apply font-bold text-[24px] leading-tight mb-[4px];
+  }
+}

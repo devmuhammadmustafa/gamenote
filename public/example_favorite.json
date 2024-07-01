@@ -1,0 +1,41 @@
+{
+  "id": 1,
+  "product_type": "premium or new",
+  "product_image": "/slug",
+  "product_link": "/slug",
+  "product_name": "Lenovo 16 Legion Pro",
+  "product_current_price": 2433,
+  "product_old_price": 2999,
+  "in_stock": true,
+  "product_colors": [
+    {
+      "color": "#ff0000",
+      "slug": "/red-lenovo"
+    },
+    {
+      "color": "#000000",
+      "slug": "/black-lenovo"
+    }
+  ],
+  "product_main_indicators": [
+    {
+      "label": "Processor",
+      "value": "Intel Core i9-12900HX (12th Gen)"
+    },
+    {
+      "label": "Video kart",
+      "value": "2.2 GHz Intel Core i9 24-Core (13th Gen)"
+    }
+  ],
+  "product_detail": [
+    {
+      "value": "Nəğd alışda 35% endirim"
+    },
+    {
+      "value": "Faizsiz kredit təklifi"
+    },
+    {
+      "value": "Komissiyasız"
+    }
+  ]
+}

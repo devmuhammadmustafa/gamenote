@@ -1,0 +1,62 @@
+.contact{
+  .contactSelf{
+    @apply bg-white p-[40px] max-[600px]:p-[20px] rounded-[30px];
+
+    .top{
+      @apply flex justify-between pb-[50px] border-b border-b-[#d9d9d9] max-[1100px]:flex-col;
+
+      .left{
+        @apply w-[calc(50%-20px)] max-[1100px]:pb-[40px] max-[1100px]:w-full;
+
+        .form{
+          @apply flex flex-wrap justify-between -mx-[10px];
+
+          .col{
+            @apply w-[calc(50%-20px)] max-[550px]:w-full mx-[10px];
+          }
+        }
+      }
+      .right{
+        @apply w-[calc(50%-20px)] max-[1100px]:w-full;
+      }
+      .right iframe{
+        @apply !w-full !h-full max-[1100px]:!h-[400px] max-[600px]:!h-[250px];
+      }
+    }
+
+    .bottom{
+      @apply flex justify-between items-center pt-[30px] max-[950px]:flex-col max-[950px]:items-start;
+
+      .left{
+        @apply max-[950px]:pb-[20px];
+
+        .contactItems{
+          @apply flex max-[650px]:flex-col;
+
+          .link{
+            @apply flex items-center transition hover:text-green max-[950px]:mb-[10px] max-[950px]:after:hidden;
+
+            .icon{
+              @apply block ml-[5px]
+            }
+
+            &:not(:last-child){
+              @apply mr-[35px] max-[1100px]:mr-[25px] after:-right-[20px];
+            }
+          }
+        }
+      }
+
+      .right{
+        @apply flex items-center max-[950px]:flex-row-reverse;
+
+        .text{
+          @apply text-[14px] font-medium text-black;
+        }
+        .link{
+          @apply block ml-[10px] max-[950px]:ml-0 max-[950px]:mr-[10px];
+        }
+      }
+    }
+  }
+}

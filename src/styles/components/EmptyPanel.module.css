@@ -1,0 +1,23 @@
+.emptyPanel{
+  @apply rounded-[30px] bg-white py-[45px] max-[600px]:py-[30px] pl-[140px] max-[1100px]:pl-[40px] max-[600px]:pl-[20px] pr-[170px] max-[1100px]:pr-[40px] max-[600px]:pr-[20px];
+
+  .emptySelf{
+    @apply flex max-[600px]:flex-col items-center justify-between;
+
+    .left{
+      @apply pr-[40px] max-[600px]:mb-[20px] max-[600px]:pr-0;
+    }
+
+    .right{
+      @apply max-w-[470px] flex flex-col justify-start;
+
+      .title{
+        @apply text-center text-[24px] leading-[32px] text-black font-bold mb-[6px];
+      }
+
+      .description{
+        @apply text-center text-[#7d7d7d];
+      }
+    }
+  }
+}

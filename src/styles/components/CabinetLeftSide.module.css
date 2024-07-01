@@ -1,0 +1,78 @@
+.cabinetLeftSide{
+    @apply w-[276px] max-[991px]:w-full pr-[30px] max-[991px]:pr-0 max-[991px]:pb-[15px] border-r border-gray flex flex-col max-[991px]:border-r-0 max-[991px]:border-b;
+
+    .title{
+        @apply text-green-hover text-[24px] font-bold;
+    }
+
+    .profilePart{
+        @apply py-[20px] flex items-center border-b border-gray;
+
+        .image{
+            @apply w-[48px] h-[48px] bg-green rounded-full flex items-center justify-center mr-[10px] text-[20px];
+        }
+        .name{
+            @apply text-[12px] font-semibold w-min;
+        }
+    }
+
+    .bottom{
+        @apply flex flex-1 flex-col justify-between pt-[15px];
+
+        .list{
+            @apply flex flex-col;
+
+            .link{
+                @apply flex items-center py-[5px] mb-[10px] last:mb-0;
+
+                .icon{
+                    @apply w-[20px] flex justify-center;
+                }
+
+                .text{
+                    @apply block text-[14px] font-medium text-black pl-[10px];
+                }
+
+                &.active{
+                    @apply pointer-events-none;
+                    
+                    .icon{
+                        @apply text-green-hover;
+                    }
+                    .text{
+                        @apply text-green-hover;
+                    }
+                }
+
+                &:hover{
+                    .icon{
+                        @apply text-green-hover;
+                    }
+                    .text{
+                        @apply text-green-hover;
+                    }
+                }
+            }
+        }
+        .exit{
+            @apply flex items-center py-[5px] mb-[10px] last:mb-0 mt-[40px] max-[991px]:mt-[5px];
+
+                .icon{
+                    @apply w-[20px] flex justify-center;
+                }
+
+                .text{
+                    @apply block text-[14px] font-medium text-black pl-[10px];
+                }
+
+                &:hover{
+                    .icon{
+                        @apply text-green-hover;
+                    }
+                    .text{
+                        @apply text-green-hover;
+                    }
+                }
+        }
+    }
+}

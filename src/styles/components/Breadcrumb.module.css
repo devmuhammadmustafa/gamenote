@@ -1,0 +1,25 @@
+.breadcrumb {
+  .list {
+    @apply inline-block py-[20px] flex-wrap;
+
+    .item {
+      @apply inline pl-[11px] first:pl-0 max-[600px]:text-[12px];
+
+      .link {
+        @apply font-medium text-[#a5a5a5] hover:text-green-hover hover:before:!bg-green-hover;
+      }
+
+      &:not(:first-child) {
+        .link {
+          @apply relative pl-[15px] before:absolute before:w-[4px] before:h-[4px] before:bg-[#a5a5a5] before:rounded-full before:left-0 before:top-[5px];
+        }
+      }
+
+      &:last-child {
+        .link {
+          @apply text-dark-green pointer-events-none before:bg-green-hover;
+        }
+      }
+    }
+  }
+}

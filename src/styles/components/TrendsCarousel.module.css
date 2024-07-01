@@ -1,0 +1,28 @@
+.trendsCarousel{
+  @apply pt-[20px] pb-[40px];
+
+  .self{
+    .webSlider{
+      @apply max-[550px]:hidden;
+
+      .item{
+        @apply bg-[#d9d9d9] rounded-[21px];
+      }
+
+      .item a{
+        @apply hover:opacity-80 transition;
+      }
+      .item img{
+        @apply h-[341px] max-[1350px]:h-[241px] rounded-[21px] max-[800px]:h-[150px] max-[1000px]:h-[200px] w-auto max-w-none max-[500px]:h-[150px];
+      }
+    }
+
+    .mobSlider{
+      @apply min-[551px]:hidden px-[20px];
+
+      .link{
+        @apply block mb-[20px] last:mb-0;
+      }
+    }
+  }
+}

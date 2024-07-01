@@ -1,0 +1,35 @@
+.aboutUs{
+  @apply p-[40px] max-[700px]:p-[20px] pt-[24px] rounded-[30px];
+
+  .logo{
+    @apply text-[370px] max-[700px]:text-[300px] max-[600px]:text-[250px]
+  }
+
+  .mainTitle{
+    @apply text-[24px] max-[600px]:text-[18px] max-[500px]:text-[16px] font-bold mb-[30px];
+  }
+
+  .title{
+    @apply text-[16px] max-[500px]:text-[14px] text-green-hover font-semibold mb-[6px];
+  }
+
+  .description{
+    @apply text-[14px] text-[12px] leading-[24px] mb-[30px];
+  }
+
+  .aboutInfoBlock{
+    @apply border rounded-[20px];
+  }
+
+  .aboutInfoBlock > div{
+    @apply p-0;
+  }
+
+  .aboutInfoBlock > div > div{
+    @apply p-0;
+  }
+
+  .aboutInfoBlock > div > div > div{
+    @apply before:hidden after:hidden;
+  }
+}

@@ -1,0 +1,169 @@
+.productList {
+  @apply flex flex-wrap -m-[10px];
+
+  .productBanner {
+    @apply w-[calc(50%-20px)] max-[450px]:w-full m-[10px] mt-[59px] max-[550px]:mt-[10px] transition hover:opacity-80;
+  }
+
+  .productCard {
+    @apply w-[calc(50%-20px)] max-[500px]:w-1/2 flex flex-col m-[10px] max-[500px]:m-0 rounded-[30px] max-[500px]:rounded-none max-[500px]:mb-[10px] pt-[24px] px-[30px] max-[700px]:px-[20px] pb-[28px] max-[500px]:pb-[20px] mt-[59px] max-[550px]:mt-[10px] max-[992px]:relative;
+
+    &:nth-child(2n-1) {
+      @apply max-[500px]:border-r max-[500px]:border-[#d9d9d9];
+    }
+
+    &:first-child {
+      @apply max-[500px]:rounded-tl-[30px];
+    }
+    &:nth-child(2) {
+      @apply max-[500px]:rounded-tr-[30px];
+    }
+    &:last-child {
+      @apply max-[500px]:rounded-br-[30px];
+    }
+    &:nth-last-child(2) {
+      @apply max-[500px]:rounded-bl-[30px];
+    }
+
+    .topPart {
+      @apply flex justify-between mb-[14px] max-[992px]:flex-wrap;
+
+      .left {
+        @apply w-[70%] max-[1100px]:w-[60%] max-[992px]:w-full -mt-[63px] max-[550px]:mt-0;
+
+        .image {
+          @apply w-[307px] max-[1100px]:w-[90%] max-[500px]:w-[75%] mb-[15px];
+
+          .self {
+            @apply max-h-[220px];
+          }
+        }
+        .title {
+          @apply text-dark-green font-semibold text-[22px] max-[850px]:text-[18px] max-[850px]:font-medium leading-tight max-[550px]:text-[14px];
+        }
+      }
+      .right {
+        @apply flex flex-col items-end w-[36%] max-[1100px]:w-[40%] max-[992px]:w-full max-[992px]:pt-[20px] max-[992px]:items-start;
+
+        .price {
+          @apply max-[992px]:flex max-[992px]:items-center max-[500px]:flex-col max-[500px]:items-start;
+
+          .current {
+            @apply text-[24px] text-red max-[850px]:text-[20px] max-[550px]:text-[14px] leading-tight font-bold;
+          }
+          .old {
+            @apply text-[14px] font-semibold  block text-right max-[992px]:ml-[5px] max-[500px]:ml-0 max-[992px]:mb-0 max-[550px]:text-[12px];
+          }
+        }
+
+        .list {
+          @apply relative z-[1] flex flex-col mt-[10px] items-end max-[992px]:pt-[10px] max-[992px]:items-start max-[992px]:flex-row max-[992px]:flex-wrap max-[600px]:hidden;
+
+          .item {
+            @apply mb-[6px] max-[992px]:mr-[6px] last:mb-0 pt-[6px] pr-[11px] pb-[8px] pl-[13px] text-[12px] font-semibold rounded-[40px];
+          }
+        }
+      }
+    }
+
+    .middlePart {
+      @apply flex justify-between flex-1 items-start pb-[38px] max-[600px]:pb-[15px] max-[500px]:border-t max-[500px]:border-[#d9d9d9] max-[500px]:pt-[10px];
+
+      .left {
+        .title {
+          @apply font-semibold text-[14px] mb-[12px] max-[600px]:hidden;
+        }
+        .indicators {
+          @apply flex flex-col;
+
+          .item {
+            @apply pl-[15px] relative before:absolute before:w-[4px] before:h-[4px] before:rounded-full before:bg-[#A5A5A5] before:left-0 before:top-[9px] max-[600px]:pl-0 max-[600px]:before:hidden;
+
+            .label {
+              @apply text-[14px] text-[#A5A5A5] max-[650px]:text-[12px];
+            }
+            .value {
+              @apply text-[14px] inline-block ml-[5px] max-[650px]:text-[12px] max-[650px]:inline;
+            }
+          }
+        }
+      }
+
+      .right {
+        @apply flex flex-col max-[992px]:absolute max-[992px]:right-[20px] max-[992px]:top-[50px] max-[700px]:hidden;
+
+        .color {
+          @apply hidden w-[18px] h-[18px] cursor-pointer rounded-full mb-[10px] last:mb-0 relative after:transition after:absolute after:-top-[3px] after:-left-[3px] after:border after:border-green after:rounded-full after:w-[24px] after:h-[24px] after:opacity-0 hover:after:opacity-100 before:absolute before:w-[18px] before:h-[18px] before:rounded-full before:border before:border-[#D9D9D9] before:opacity-0;
+        }
+      }
+    }
+
+    .bottomPart {
+      @apply flex justify-between items-center max-[992px]:flex-col-reverse max-[550px]:flex-row;
+
+      .left {
+        @apply flex pr-[10px] max-[992px]:pr-0 max-[992px]:w-full max-[550px]:hidden;
+      }
+
+      .productType {
+        @apply h-[48px] max-[850px]:h-[38px] select-none flex items-center rounded-[30px] border px-[25px];
+
+        .text {
+          @apply text-[14px] inline-block mx-[5px] font-medium;
+        }
+
+        &.premium {
+          @apply border-[#D74B53] text-[#D74B53] text-[20px];
+
+          .text {
+            @apply text-[#D74B53] font-medium;
+          }
+        }
+      }
+      .productType.new,
+      .productType.premium {
+        @apply max-[1150px]:pl-0 max-[1150px]:pr-0 max-[1150px]:w-[48px] max-[850px]:w-[38px] flex justify-center;
+      }
+      .productType.new span:last-child {
+        @apply max-[1150px]:hidden;
+      }
+      .productType.new span:first-child {
+        @apply text-[18px];
+      }
+      .productType.premium span:last-child {
+        @apply text-[14px];
+      }
+      .productType.premium span:first-child {
+        @apply max-[1150px]:hidden;
+      }
+
+      .left button {
+        @apply max-[992px]:flex-1 max-[992px]:justify-center px-[40px] max-[992px]:px-[20px] mr-[10px] max-[550px]:hidden;
+      }
+
+      .right {
+        @apply max-[992px]:pb-[15px] max-[550px]:pb-0 max-[550px]:w-full;
+
+        .buttons {
+          @apply flex max-[550px]:justify-between max-[500px]:border-t max-[500px]:border-[#d9d9d9] max-[500px]:pt-[10px] max-[500px]:-mt-[10px];
+
+          .button {
+            @apply mr-[10px] last:mr-0;
+
+            &:nth-child(3) {
+              @apply max-[550px]:absolute max-[550px]:top-[15px] max-[550px]:right-[5px];
+            }
+          }
+
+          .type {
+            @apply min-[551px]:hidden;
+          }
+        }
+      }
+    }
+  }
+}
+
+.moreButton {
+  @apply w-full flex justify-center items-center pt-[20px];
+}

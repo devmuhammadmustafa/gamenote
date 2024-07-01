@@ -1,0 +1,177 @@
+.header {
+  @apply relative;
+
+  .topHeader {
+    .self {
+      @apply p-[30px] max-[850px]:p-[20px] rounded-[30px] transition flex items-center justify-between;
+
+      .left {
+        @apply flex items-center;
+
+        .logo {
+          @apply text-[201px] max-[850px]:text-[177px] max-[550px]:text-[117px];
+        }
+        .logo img{
+          @apply w-[201px] max-[850px]:w-[177px] max-[550px]:w-[117px];
+        }
+
+        .contactItems {
+          @apply flex pl-[30px] max-[992px]:hidden;
+
+          .link {
+            @apply flex items-center transition hover:text-green;
+
+            &:first-child {
+              @apply mr-[48px] max-[1100px]:mr-[25px] after:-right-7 max-[1100px]:after:-right-[16px];
+            }
+          }
+        }
+      }
+
+      .right {
+        @apply flex;
+
+        .buttons {
+          @apply flex items-center max-[650px]:hidden;
+
+          .link {
+            @apply inline-block mr-5 max-[992px]:mr-[10px];
+
+            &.active {
+              @apply pointer-events-none;
+            }
+
+            &.active button {
+              @apply border-green bg-green;
+            }
+          }
+        }
+
+        .loginButton {
+          @apply pl-[27px] max-[400px]:pl-0 before:-left-[2px] max-[992px]:before:left-[4px] max-[650px]:before:hidden;
+        }
+        .loginButton button {
+          @apply max-[1100px]:pl-[40px] max-[1100px]:pr-[40px];
+        }
+        .loginButton button {
+          @apply max-[550px]:pl-0 max-[550px]:pr-0 max-[550px]:w-[38px] max-[550px]:h-[38px] max-[550px]:flex max-[550px]:justify-center;
+        }
+        .loginButton button > span:first-child {
+          @apply min-[551px]:hidden;
+        }
+        .loginButton button > span:first-child span {
+          @apply text-[18px];
+        }
+        .loginButton button > span:last-child {
+          @apply max-[550px]:hidden ml-0;
+        }
+
+        .mobileMenuButton {
+          @apply min-[851px]:hidden pl-[37px] before:left-[14px] flex items-center;
+        }
+
+        .profilePart {
+          @apply flex items-center flex-row-reverse;
+
+          .image {
+            @apply w-[48px] h-[48px] max-[850px]:w-[38px] max-[850px]:h-[38px] bg-green rounded-full flex items-center justify-center ml-[10px] text-[20px];
+          }
+          .name {
+            @apply text-[12px] font-semibold w-min text-right max-[850px]:leading-[1.2] max-[400px]:hidden;
+          }
+        }
+      }
+    }
+  }
+
+  .middleHeader {
+    @apply py-[17px] max-[850px]:hidden;
+
+    .self {
+      @apply flex items-center justify-between;
+
+      .list {
+        @apply flex items-center;
+
+        .item {
+          @apply mr-[51px] max-[992px]:mr-[30px] last:mr-0 last:after:hidden after:-right-7 max-[990px]:after:-right-[18px] dark:text-light hover:text-green-hover transition;
+
+          .active {
+            @apply text-dark-green;
+          }
+        }
+      }
+
+      .right {
+        @apply flex items-center;
+
+        .darkModeButton {
+          @apply mr-5 max-[992px]:mr-[10px];
+        }
+      }
+    }
+  }
+
+  .mobileMenu {
+    @apply min-[851px]:hidden absolute w-[calc(100%-40px)] flex flex-col justify-between rounded-[30px] left-[20px] -top-[58px] p-[20px];
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+
+    .top {
+      @apply pb-[20px];
+
+      .title {
+        @apply text-[22px] text-[#7CB503] font-semibold leading-[32px] mb-[20px];
+      }
+      .list {
+        .item {
+          @apply flex items-center py-[3px] my-[3px];
+
+          .text {
+            @apply text-[14px] font-medium block ml-[6px];
+          }
+        }
+      }
+    }
+    .bottom > div {
+      @apply flex-1;
+    }
+    .bottom {
+      @apply flex pt-[20px] relative w-full border-t border-t-[#d9d9d9];
+
+      .darkModeButton {
+        @apply ml-[10px] flex-none;
+      }
+    }
+  }
+
+  .bottomHeader {
+    @apply max-[850px]:pt-[20px];
+
+    .self {
+      @apply flex;
+    }
+  }
+}
+
+.mobileNavbar {
+  @apply min-[651px]:hidden h-[78px] w-full fixed bottom-0 left-0 z-[22] px-[20px] flex items-center justify-between;
+  box-shadow: 0px -3px 40px rgba(0, 0, 0, 0.1);
+
+  .link {
+    @apply flex flex-col items-center;
+
+    .text {
+      @apply text-[10px] font-medium leading-[18px];
+    }
+  }
+}
+.mobileNavbarButtons {
+  @apply fixed bottom-[96px] right-[20px] z-[20] min-[901px]:hidden;
+
+  .callButton {
+    @apply flex min-[651px]:hidden justify-center items-center w-[48px] h-[48px] bg-[#06E077] rounded-full;
+  }
+}
+.mobileNavbarButtons button {
+  @apply mt-[20px];
+}

@@ -1,0 +1,17 @@
+.searchForm{
+    @apply relative flex-1;
+
+    .searchInput{
+        @apply h-[68px] max-[850px]:h-[58px] rounded-[50px] w-full transition pl-[30px] placeholder:italic border focus:border-green outline-none max-[850px]:pl-[20px] max-[850px]:text-[12px];
+    }
+
+    .searchButton{
+        @apply absolute top-1/2 -translate-y-1/2 right-[10px];
+    }
+    .searchButton button{
+        @apply max-[600px]:pl-0 max-[600px]:pr-0 max-[600px]:w-[38px] max-[600px]:flex max-[600px]:justify-center;
+    }
+    .searchButton button > span:last-child{
+        @apply max-[600px]:hidden;
+    }
+}

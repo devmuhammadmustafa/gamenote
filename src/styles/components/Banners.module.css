@@ -1,0 +1,163 @@
+.bannersBlock {
+  @apply py-5;
+
+  .bannersBlockSelf {
+    @apply flex justify-between;
+  }
+}
+.leftTopBanner {
+  @apply w-[387px] max-[992px]:w-full rounded-[30px] overflow-hidden transition;
+
+  .header {
+    @apply px-[30px] pt-[14px] pb-[18px] flex items-center justify-between;
+
+    .left {
+      @apply font-semibold;
+    }
+
+    .right {
+      @apply w-[120px] text-right font-semibold text-[#D74B53];
+    }
+  }
+
+  .body {
+    @apply p-[30px] pt-6 max-[600px]:p-[20px] flex flex-col justify-between h-[calc(100%-53px)];
+
+    .title {
+      @apply text-green-hover hover:text-dark-green text-[18px] font-semibold mb-[20px] relative z-[1];
+    }
+
+    .price {
+      @apply flex items-center flex-wrap pb-[20px] mb-[20px] relative z-[1] after:absolute after:w-full after:h-[1px] after:left-0 after:bottom-0;
+
+      .current {
+        @apply mb-[10px] text-[18px] font-bold leading-5 px-4 py-2 rounded-[30px] text-[#FF0101] border-[#FF0101] border mr-[10px];
+      }
+      .old {
+        @apply mb-[10px] font-semibold;
+      }
+    }
+
+    .details {
+      @apply flex items-center relative pb-[20px] max-[600px]:flex-wrap;
+
+      .list {
+        @apply flex-1 relative z-[1] flex flex-col items-start max-[600px]:pt-[20px] max-[600px]:w-full max-[600px]:flex max-[600px]:flex-row max-[600px]:flex-wrap max-[600px]:pr-[8px];
+
+        .listItem {
+          @apply mb-[6px] mr-2 last:mb-0 pt-[6px] pr-[11px] pb-[8px] pl-[13px] text-[12px] font-semibold rounded-[40px];
+        }
+      }
+      .image {
+        @apply h-auto relative max-w-[50%] max-[600px]:max-w-[80%] max-[600px]:relative max-[600px]:pl-0 max-[600px]:top-0 max-[600px]:translate-y-0;
+      }
+      .image img {
+        @apply object-contain;
+      }
+    }
+    .ratingBar {
+      @apply flex items-center pt-[25px] pb-[15px] mb-[20px] hidden;
+
+      .stars {
+        @apply flex text-star text-[18px];
+      }
+      .stars span {
+        @apply mr-[7px] last:mr-0;
+      }
+      .ratingCount {
+        @apply font-semibold text-[12px] inline-block ml-[11px];
+      }
+    }
+    .button {
+      @apply relative z-[1] pt-[20px] after:absolute after:w-full after:h-[1px] after:left-0 after:top-0;
+    }
+    .button button {
+      @apply h-[50px];
+    }
+    .button span:last-child {
+      @apply !block;
+    }
+  }
+}
+
+.rightTopBannerSlider {
+  @apply w-[calc(100%-407px)] rounded-[30px] relative h-[535px] max-[992px]:hidden;
+  background: linear-gradient(180deg, #e2e2e2 -0.19%, #ededed 100%);
+
+  .slider {
+    @apply h-full;
+
+    .item {
+      @apply relative;
+
+      .image {
+        @apply absolute left-0 -top-[40px] w-[550px];
+      }
+
+      .details {
+        @apply w-full flex items-end flex-col;
+
+        .subtitle {
+          @apply text-[#9bca33] font-semibold font-[16px] mb-4;
+        }
+        .title {
+          @apply text-[36px] leading-tight font-bold uppercase text-black text-right mb-6;
+        }
+        .prices {
+          @apply flex items-end mb-2;
+
+          .old {
+            @apply font-bold mr-3 text-[#A5A5A5];
+          }
+          .current {
+            @apply font-bold text-black text-[18px];
+          }
+        }
+
+        .discount {
+          @apply text-[#FF0101] font-bold mb-2 text-[16px];
+        }
+        .credit {
+          @apply text-black font-bold;
+        }
+      }
+    }
+  }
+
+  .slider div {
+    @apply h-full;
+  }
+
+  .slider a {
+    @apply block w-full h-full;
+  }
+
+  .slider img {
+    @apply h-full w-full object-cover object-right-top rounded-[30px];
+  }
+
+  .bottomBar {
+    @apply absolute left-[30px] bottom-[30px] w-[calc(100%-60px)] flex items-center justify-between;
+
+    .left {
+      @apply text-[133px];
+    }
+
+    .right {
+      @apply flex pl-[30px];
+
+      .link {
+        @apply flex items-center first:mr-[48px] first:after:-right-7;
+      }
+    }
+  }
+}
+.prevButton {
+  @apply absolute !h-auto right-[95px] bottom-[80px] z-[2];
+}
+.disable button span {
+  @apply text-[#A5A5A5];
+}
+.nextButton {
+  @apply absolute !h-auto right-[30px] bottom-[80px] z-[2];
+}

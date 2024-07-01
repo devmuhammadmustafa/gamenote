@@ -1,0 +1,168 @@
+.basketList {
+  @apply rounded-[30px] py-[20px] px-[30px] max-[750px]:px-[15px] flex justify-between max-[750px]:flex-wrap;
+
+  .basketLeft {
+    @apply w-[calc(100%-305px)] max-[750px]:w-full;
+
+    .title {
+      @apply text-[14px] font-semibold mb-[14px];
+    }
+
+    .list {
+      @apply flex flex-col w-full relative after:absolute after:w-[1px] after:h-full after:bg-[#D9D9D9] after:top-0 after:-right-[30px];
+
+      .listItem {
+        @apply border border-[2px] border-green flex justify-between rounded-[20px] px-[30px] max-[1100px]:px-[20px] py-[16px] mb-[20px] last:mb-0 max-[1100px]:flex-col;
+
+        .itemLeft {
+          @apply relative w-[330px] max-[1100px]:w-full pr-[20px] max-[1100px]:pr-0 after:absolute after:w-[1px] after:h-full after:bg-[#D9D9D9] after:top-0 after:right-0 max-[1100px]:after:right-0 max-[1100px]:after:bottom-0 max-[1100px]:after:top-auto max-[1100px]:after:h-[1px] max-[1100px]:after:w-full;
+
+          .image {
+            @apply h-full w-full max-[400px]:max-w-[170px] object-contain object-top;
+          }
+
+          .button {
+            @apply absolute top-0 right-[20px] max-[1100px]:right-0 max-[400px]:-right-[10px];
+
+            .productType {
+              @apply flex flex-row-reverse items-center h-[30px] max-[400px]:w-[38px] max-[400px]:h-[38px] border rounded-[30px] pl-[10px] pr-[8px] text-[15px] max-[400px]:p-0 max-[400px]:justify-center;
+
+              .text {
+                @apply text-[13px] font-semibold inline-block mr-[3px] relative top-[1px];
+              }
+
+              &.new {
+                @apply border-green;
+
+                .text {
+                  @apply text-green max-[400px]:hidden;
+                }
+              }
+              &.premium {
+                @apply border-[#D74B53] text-[#D74B53] flex flex-row;
+
+                .text {
+                  @apply text-[#D74B53] block mr-2 max-[400px]:hidden;
+                }
+              }
+            }
+          }
+        }
+
+        .itemRight {
+          @apply relative w-[calc(100%-330px)] max-[1100px]:w-full pl-[20px] max-[1100px]:pl-0 max-[1100px]:pt-3;
+
+          .title {
+            @apply text-[18px] max-[800px]:text-[16px] font-semibold uppercase text-[#7CB503] pr-[50px] max-[1100px]:pr-0 max-[1100px]:min-h-fit;
+          }
+          .deleteIcon {
+            @apply absolute -right-[10px] top-[0px] max-[1100px]:-top-[115px] max-[1100px]:right-0 max-[400px]:-right-[10px] max-[400px]:-top-[110px] max-[400px]:text-[12px];
+          }
+
+          .buttonsContainer {
+            @apply rounded-[50px] max-[1200px]:rounded-[10px] w-[calc(100%+20px)] border border-[#d9d9d9] p-[10px] max-[1100px]:p-0 flex items-center flex-wrap max-[800px]:flex-col-reverse max-[1200px]:border-none max-[800px]:pr-5;
+
+            .price {
+              @apply flex items-center ml-[13px] max-[1200px]:w-full max-[1200px]:mt-2 max-[800px]:mt-0 max-[800px]:mb-2 max-[1200px]:ml-0;
+
+              .current {
+                @apply text-[24px] max-[800px]:text-[20px] font-bold text-[#1d1d1d] mr-[10px];
+              }
+
+              .old {
+                @apply text-[14px] font-semibold text-[#FF0101];
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .basketRight {
+    @apply w-[245px] max-[750px]:w-full max-[750px]:mt-6;
+
+    .title {
+      @apply text-[14px] font-semibold mb-[14px];
+    }
+
+    .rightBar {
+      @apply rounded-[20px] p-[15px];
+
+      .row {
+        @apply flex items-center justify-between mb-[10px];
+
+        .left {
+          @apply text-[12px] font-semibold text-[#a5a5a5];
+        }
+        .right {
+          @apply text-[12px] font-semibold text-white;
+        }
+      }
+      .totalRow {
+        @apply border-t border-t-[#7D7D7D] mt-[5px] pt-[18px] flex items-center justify-between mb-[24px];
+
+        .left {
+          @apply text-[12px] font-semibold text-green;
+        }
+        .right {
+          @apply text-[14px] font-semibold text-green;
+        }
+      }
+    }
+
+    .infoText {
+      @apply mt-[15px];
+
+      .infoTitle {
+        @apply flex items-center text-[#71A600] text-[14px] mb-[10px];
+
+        .textSelf {
+          @apply inline-block ml-[4px];
+        }
+      }
+      .description {
+        @apply text-[#7d7d7d] font-medium text-[10px];
+      }
+    }
+  }
+
+  .form {
+    @apply gap-[15px] relative after:absolute after:w-[1px] after:h-full after:bg-[#D9D9D9] after:top-0 after:-right-[30px];
+
+    &.twoColumn {
+      @apply flex flex-wrap justify-between;
+    }
+
+    &.twoColumn > * {
+      @apply w-[calc(50%-15px)];
+    }
+
+    .methods {
+      @apply !w-full;
+
+      .methodTitle {
+        @apply text-[14px] font-semibold text-green-hover mb-[14px];
+      }
+
+      .methodList {
+        @apply flex gap-[20px];
+
+        .methodItem {
+          @apply flex-1;
+
+          .input {
+            @apply hidden;
+          }
+          .label {
+            @apply flex items-center cursor-pointer h-[44px] w-full rounded-[30px] border border-[#D9D9D9] px-[20px] relative text-[14px] text-[#A5A5A5] font-semibold after:absolute after:right-[16px] after:top-1/2 after:-translate-y-1/2 after:border after:rounded-full after:w-[16px] after:h-[16px] after:border-[#A5A5A5] before:absolute before:right-[20px] before:top-1/2 before:-translate-y-1/2 before:rounded-full before:w-[8px] before:h-[8px] before:bg-transparent;
+          }
+
+          .input:checked + .label {
+            @apply bg-green border-green text-black after:border-black before:bg-black;
+          }
+        }
+      }
+    }
+  }
+}

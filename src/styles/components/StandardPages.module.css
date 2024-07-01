@@ -1,0 +1,76 @@
+.deliveryAndPayment{
+  .deliveryBlock{
+    @apply bg-white rounded-[30px] px-[40px] max-[600px]:px-[20px] pt-[35px] max-[600px]:pt-[20px] pb-[55px] max-[600px]:pb-[20px];
+
+    .branchName{
+      @apply text-[16px] font-semibold text-green-hover mb-[30px] max-[600px]:mb-[20px];
+    }
+    .title{
+      @apply text-[18px] uppercase font-bold text-black mb-[10px];
+    }
+    .description{
+      @apply text-[#7d7d7d] mb-[10px];
+    }
+    .description strong{
+      @apply text-black;
+    }
+    .list{
+      @apply list-disc pl-[15px] mb-[20px];
+
+      .item{
+        @apply text-[#7d7d7d];
+      }
+    }
+    .quote{
+      @apply mb-[40px] bg-[rgba(153,224,0,.2)] px-[20px] py-[13px] font-semibold text-green-hover border-l border-l-[6px] border-l-green;
+    }
+  }
+}
+
+.warrantyConditions{
+  .warrantyBlock{
+    @apply p-[30px] bg-white rounded-[30px];
+
+    .list{
+      @apply pl-[15px] list-disc text-[#7d7d7d];
+    }
+  }
+}
+
+.privacyTerms{
+  .privacyBlock{
+    @apply p-[30px] max-[600px]:p-[20px] rounded-[30px] bg-white;
+
+    .privacyItem{
+      @apply mb-[30px] last:mb-0;
+
+      .title{
+        @apply uppercase text-green-hover text-[18px] font-bold mb-[10px];
+      }
+      .desc{
+        @apply text-[#7d7d7d]
+      }
+      .list{
+        @apply pl-[15px] list-disc text-[#7d7d7d];
+
+        .item{
+          @apply mb-[10px] last:mb-0;
+        }
+      }
+    }
+  }
+}
+
+.returnPolicyBlock{
+  .returnBlock{
+    @apply p-[30px] max-[600px]:p-[20px] rounded-[30px] bg-white;
+
+    .list{
+      @apply pl-[15px] text-[#7d7d7d] list-disc;
+
+      .item{
+        @apply mb-[20px] last:mb-0;
+      }
+    }
+  }
+}

@@ -1,0 +1,225 @@
+.leftFilterBar {
+  @apply p-[20px] rounded-[20px] w-[285px] top-[20px] left-0;
+  position: sticky;
+  position: -webkit-sticky;
+
+  .title {
+    @apply pb-[14px] text-[14px] font-semibold w-full;
+  }
+
+  .box {
+    @apply border rounded-[20px] p-[15px] mb-[20px] last:mb-0 overflow-hidden;
+
+    &.accordionBox {
+      @apply pb-0;
+    }
+
+    .brand {
+      @apply mb-[10px] last:mb-0;
+
+      .input {
+        @apply hidden;
+      }
+      .label {
+        @apply text-[12px] leading-[18px] cursor-pointer block hover:text-green-hover relative after:absolute after:w-[15px] after:h-[15px] after:border after:border-green after:rounded-full after:right-0 after:top-1/2 after:-translate-y-1/2 before:absolute before:w-[7px] before:h-[7px] before:bg-green before:rounded-full before:right-[4px] before:top-1/2 before:-translate-y-1/2 before:opacity-0 after:opacity-0 before:transition after:transition;
+      }
+
+      .input:checked + .label {
+        @apply text-green-hover font-semibold after:opacity-100 before:opacity-100 after:transition before:transition;
+      }
+    }
+
+    .title {
+      @apply relative text-[12px] after:absolute after:w-full after:h-[1px] after:-bottom-[1px] after:left-0 after:bg-[#d9d9d9];
+    }
+
+    .rangeInputs {
+      @apply pt-[14px] flex justify-between;
+
+      .item {
+        @apply w-[calc(50%-5px)];
+
+        .label {
+          @apply text-[12px] leading-[18px] block font-medium mb-[4px];
+        }
+
+        .input {
+          @apply w-full h-[48px] border transition rounded-[50px] pl-[20px] pr-[10px] text-black outline-none !appearance-none focus:border-green;
+        }
+      }
+    }
+
+    .accordion {
+      .title {
+        @apply cursor-pointer relative;
+
+        .arrow {
+          @apply absolute right-0 top-[4px] max-[800px]:top-[20px] transition pointer-events-none;
+        }
+      }
+      .content {
+        @apply py-[14px];
+      }
+    }
+
+    .inputRadio {
+      @apply mb-[10px] last:mb-0;
+
+      .input {
+        @apply hidden;
+      }
+      .label {
+        @apply text-[12px] leading-[18px] text-[#a5a5a5] cursor-pointer block hover:text-green-hover relative before:absolute before:w-[15px] before:h-[15px] before:border before:border-[#d9d9d9] before:rounded-[4px] before:right-0 before:top-1/2 before:-translate-y-1/2 hover:before:border-green before:bg-no-repeat before:bg-center before:bg-[length:10px_10px];
+      }
+
+      .input:checked + .label {
+        @apply text-green-hover font-semibold before:bg-green before:border-green;
+      }
+    }
+  }
+}
+
+.filteredProducts {
+  @apply p-[30px] max-[700px]:p-[20px] rounded-[20px] w-[calc(100%-305px)] max-[900px]:w-full;
+
+  .titleBar {
+    @apply flex items-center justify-between max-[500px]:flex-col max-[600px]:items-start max-[600px]:pb-[15px];
+
+    .left {
+      @apply text-[22px] text-[#89C605] font-semibold max-[600px]:pb-[5px];
+    }
+  }
+
+  .products {
+    @apply flex flex-wrap max-[500px]:w-[calc(100%+40px)] max-[500px]:-ml-[20px] pt-[10px] max-[500px]:border-t max-[500px]:border-[#d9d9d9];
+
+    .item {
+      @apply p-[20px] flex flex-col rounded-[20px] relative border border-[1px] transition hover:border-green w-[calc(100%/3-10px)] max-[500px]:w-1/2 max-[1100px]:w-[calc(50%-10px)] m-[5px] max-[500px]:m-0 max-[500px]:rounded-none max-[500px]:border-0 max-[500px]:border-b;
+
+      &:nth-child(2n-1) {
+        @apply max-[500px]:!border-r max-[500px]:!border-[#d9d9d9];
+      }
+
+      .image {
+        @apply w-[calc(100%-30px)] max-[600px]:w-full h-[130px] max-[500px]:h-[100px] min-[501px]:max-[600px]:h-[115px] -mt-[4px] -ml-[2px] !mx-auto;
+
+        .imageSelf {
+          @apply max-h-full object-contain mx-auto;
+        }
+      }
+
+      .colors {
+        @apply flex flex-col absolute top-[15px] right-[20px] max-[600px]:hidden;
+
+        .color {
+          @apply w-[18px] h-[18px] my-[5px] cursor-pointer rounded-full relative after:transition after:absolute after:-top-[3px] after:-left-[3px] after:border after:border-green after:rounded-full after:w-[24px] after:h-[24px] after:opacity-0 hover:after:opacity-100 before:absolute before:w-[18px] before:h-[18px] before:rounded-full before:border before:border-[#D9D9D9] before:opacity-0;
+
+          &.active {
+            @apply pointer-events-none after:transition after:absolute after:-top-[3px] after:-left-[3px] after:border after:border-green after:rounded-full after:w-[24px] after:h-[24px] after:opacity-100 before:absolute before:w-[18px] before:h-[18px] before:rounded-full before:border before:border-[#D9D9D9];
+          }
+        }
+      }
+
+      .ratingBar {
+        @apply flex items-center pt-[12px] pb-[9px] relative;
+
+        .stars {
+          @apply flex text-star text-[18px] max-[600px]:text-[14px];
+        }
+        .stars span {
+          @apply mr-[7px] last:mr-0 max-[600px]:mr-[4px];
+        }
+        .ratingCount {
+          @apply font-semibold text-[12px] max-[600px]:text-[10px] inline-block ml-[11px];
+        }
+      }
+
+      .productTitle {
+        @apply text-[14px] leading-[18px] mt-4 font-semibold max-[600px]:font-medium text-green-hover mb-[18px] max-[500px]:mb-[10px];
+      }
+
+      .priceSelf {
+        @apply flex items-center mb-[8px] max-[500px]:mb-0 max-[500px]:flex-col max-[500px]:items-start;
+
+        .current {
+          @apply text-[18px] max-[600px]:text-[14px] leading-[24px] font-bold text-red;
+        }
+
+        .old {
+          @apply max-[600px]:text-[12px] font-semibold block ml-[4px] max-[500px]:ml-0;
+        }
+      }
+
+      .details {
+        @apply pl-[15px] max-[600px]:pl-0 pt-[10px] pb-[34px] max-[600px]:pb-[15px] relative border-b border-b-[#d9d9d9];
+
+        .listItem {
+          @apply text-[12px] leading-[16px] font-semibold max-[600px]:font-normal max-[600px]:leading-[20px] text-[#a5a5a5] list-disc max-[600px]:list-none;
+
+          .label {
+            @apply text-[#a5a5a5];
+          }
+        }
+      }
+
+      .buttons {
+        @apply flex justify-between pt-[14px] pb-[20px];
+      }
+
+      .filteredProductCardBottom {
+        @apply relative w-[calc(100%+40px)] -left-[20px] p-[15px] pb-[50px] flex-1 max-[500px]:pt-[5px] pt-0;
+      }
+    }
+  }
+
+  .pagination {
+    @apply flex justify-center items-center pt-[20px];
+
+    .disabled span {
+      @apply opacity-20;
+    }
+
+    .disabled {
+      @apply pointer-events-none;
+    }
+
+    .list {
+      @apply px-[6px] flex;
+
+      .link {
+        @apply block text-[14px] font-semibold p-[3px] mx-[4px] hover:text-green-hover;
+
+        &.active {
+          @apply text-green-hover pointer-events-none;
+        }
+      }
+    }
+  }
+}
+
+.filterBarSelf {
+  @apply flex justify-between items-stretch relative;
+
+  .leftFilterBar {
+    @apply max-[900px]:hidden;
+  }
+  .filteredProducts {
+    @apply h-auto;
+  }
+}
+
+.modalMode {
+  @apply flex flex-wrap mr-0 w-full -m-[5px];
+
+  > .title {
+    @apply m-[5px] max-[500px]:m-0 pb-[5px];
+  }
+
+  .box {
+    @apply w-[calc(50%-10px)] max-[600px]:w-full m-[5px] max-[500px]:mx-0;
+
+    .arrow {
+      @apply !top-[4px];
+    }
+  }
+}

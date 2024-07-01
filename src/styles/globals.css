@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+html,
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: #f5f5f5;
+  font-size: 14px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.after-divider {
+  @apply relative after:absolute after:w-[7px] after:h-[19px] after:top-1/2 after:-translate-y-1/2;
+}
+.after-divider:after {
+  background-image: url("../assets/images/divider.svg");
+}
+
+.before-divider {
+  @apply relative before:absolute before:w-[7px] before:h-[19px] before:top-1/2 before:-translate-y-1/2;
+}
+.before-divider:before {
+  background-image: url("../assets/images/divider.svg");
+}
+
+.lang-select .select__control {
+  @apply min-h-[48px] max-[850px]:min-h-[38px] bg-transparent border-gray dark:border-green !rounded-[40px] dark:border dark:border-green shadow-none cursor-pointer hover:border-green;
+}
+.lang-select div[class*="ValueContainer"] {
+  @apply pl-3 pr-0;
+}
+.lang-select div[class*="option"] {
+  @apply w-[155px] bg-white dark:bg-panel-dark;
+}
+.lang-select span[class*="indicatorSeparator"] {
+  @apply hidden;
+}
+.lang-select div[class*="menu"] {
+  @apply w-auto right-0 z-[2] rounded-[18px] overflow-hidden bg-transparent shadow-none border border-gray !border-[1px] dark:border-green max-[850px]:right-[0px] max-[850px]:w-full;
+}
+.mobile-menu .lang-select div[class*="menu"] {
+  @apply top-auto bottom-full w-full;
+}
+.lang-select div[class*="menu-list"] {
+  @apply !w-max !p-0 !border-none max-[850px]:!w-[calc(100%+3px)];
+}
+.lang-select .select__option {
+  @apply text-black dark:text-light cursor-pointer max-[850px]:!w-full;
+}
+.lang-select .select__menu-list {
+  @apply max-[850px]:!w-full;
+}
+.lang-select .select__option--is-focused {
+  @apply bg-white;
+}
+.lang-select .select__option:hover {
+  @apply dark:bg-panel-dark;
+}
+.lang-select .select__option--is-selected {
+  @apply !bg-green dark:text-black pointer-events-none;
+}
+.lang-select .select__dropdown-indicator {
+  @apply !text-black dark:!text-light pl-[5px] pr-[13px];
+}
+
+.slick-track {
+  @apply flex;
+}
+.slick-list {
+  @apply overflow-hidden;
+}
+.trends-carousel .slick-list * {
+  @apply outline-0;
+}
+.trends-carousel .slick-track {
+  @apply -mx-[160px] max-[500px]:-mx-[80px];
+}
+.trends-carousel .slick-slide {
+  @apply m-[10px] max-[500px]:m-[5px];
+}
+.brands-carousel .slick-slide {
+  @apply flex items-center justify-center;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: url("../assets/images/check.svg");
+}
+
+.product-thumbs-carousel .slick-active div div {
+  @apply cursor-pointer border-green;
+}
+.product-thumbs-carousel .slick-active:hover div div {
+  @apply !border-green;
+}
+.product-thumbs-carousel .slick-current div div {
+  @apply !border-green !pointer-events-none;
+}
+.product-thumbs-carousel .slick-slide div div {
+  margin: auto;
+}
+.similiar-products .slick-list {
+  @apply -mx-[10px];
+}
+.similiar-products .slick-slide {
+  @apply mx-[10px];
+}
+
+.lang-select.filter-select .select__control {
+  @apply border-black;
+}
+
+.countdown {
+  @apply flex;
+}
+.countdown-day span {
+  @apply inline-block mr-[8px] ml-[3px];
+}
+
+.lang-select.filter-select .select__control {
+  @apply dark:border-border-dark;
+}
+
+.filter-modal .modal-container {
+  &::-webkit-scrollbar {
+    display: block;
+    width: 4px;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.17);
+    margin-top: 40px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-green rounded-[8px];
+  }
+
+  &::-webkit-scrollbar-track-piece:end {
+    @apply bg-transparent;
+  }
+
+  &::-webkit-scrollbar-track-piece:start {
+    @apply bg-transparent;
+  }
+}
+.similiar-news .slick-slide {
+  @apply mx-[10px];
+}
+.product-card-middle ul {
+  @apply flex flex-col;
+}
+.product-card-middle ul li {
+  @apply pl-[15px] relative before:absolute before:w-[4px] before:h-[4px] before:rounded-full before:bg-[#A5A5A5] before:left-0 before:top-[9px] max-[600px]:pl-0 max-[600px]:before:hidden;
+}
+.product-card-middle ul li span:first-child {
+  @apply text-[14px] text-[#A5A5A5] max-[650px]:text-[12px];
+}
+.product-card-middle ul li span:last-child {
+  @apply text-[14px] dark:text-white inline-block ml-[5px] max-[650px]:text-[12px] max-[650px]:inline;
+}
+.city-select .select__menu {
+  @apply w-full top-[40px];
+}
+.city-select .select__control {
+  @apply !outline-0 !shadow-none h-[48px] !rounded-[50px];
+}
+.city-select .select__value-container {
+  @apply !px-[20px];
+}
+.city-select .select__indicator-separator {
+  @apply hidden;
+}
+.city-select .select__menu-list {
+  @apply pt-0 pb-0;
+}
+.error .select__control {
+  @apply border-red;
+}
+.select__control--is-focused {
+  @apply !border-green;
+}
+.modal-success span {
+  @apply text-green text-[60px] mb-6;
+}
+.cabinet-layout {
+  @apply pt-[30px];
+}
+.cabinet-layout-container {
+  @apply bg-white dark:bg-panel-dark px-[30px] pt-[28px] pb-[30px] max-[600px]:p-[20px] rounded-[30px] flex min-h-[550px];
+}
+.coupon-item:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  background: url("../assets/images/coupon.svg");
+}
+.filtered-product-card-desc {
+  @apply text-[12px] leading-[16px] mt-[10px] mb-[10px];
+}
+.filtered-product-card-desc ul {
+  @apply pl-[15px] max-[600px]:pl-0 max-[600px]:pb-[15px] relative text-[12px] leading-[16px];
+}
+.filtered-product-card-desc ul li {
+  @apply text-[12px] leading-[16px] font-semibold max-[600px]:font-normal max-[600px]:leading-[20px] text-[#a5a5a5] list-disc max-[600px]:list-none;
+}
+
+.active-header-button span {
+  @apply dark:text-black;
+}
+
+.slick-slide > div {
+  height: 100%;
+}
+.slick-list .slick-track {
+  min-width: 100%;
+}
+
+.static-pages ul {
+  @apply list-disc pl-[20px] text-black dark:text-light;
+}
+.static-pages ul li {
+  @apply mb-2;
+}
+.static-pages b,
+.static-pages b * {
+  @apply text-black dark:text-white;
+}
+.text-description * {
+  @apply dark:!text-light;
+}
+.product-inside-count {
+  @apply dark:!bg-panel-dark dark:!text-light;
+}
+.main-carousel .slick-slide.slick-active {
+  position: relative;
+  z-index: 1;
+}
+.fullBackground span {
+  @apply !text-black;
+}

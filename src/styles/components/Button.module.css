@@ -1,0 +1,35 @@
+.buttonDefault{
+    @apply h-[48px] max-[850px]:h-[38px] rounded-[30px] px-[40px] max-[500px]:px-[15px] transition bg-green hover:bg-green-hover font-semibold;
+}
+
+.backgroundBlack{
+    @apply bg-black hover:bg-black-hover text-[#fff];
+}
+
+.buttonWidthIcon{
+    @apply  flex items-center relative px-[30px];
+}
+
+.buttonIconRight{
+    @apply flex-row-reverse;
+}
+
+.textRight{
+    @apply inline-block ml-[13px] max-[550px]:hidden;
+}
+
+.textLeft{
+    @apply inline-block mr-[13px] max-[550px]:hidden;
+}
+
+.iconButton{
+    @apply w-[48px] max-[850px]:w-[38px] h-[48px] max-[850px]:h-[38px] rounded-full border border-gray text-black flex items-center justify-center transition hover:bg-green hover:border-green;
+}
+
+.iconButton span{
+    @apply text-black;
+}
+
+.iconButton:hover span{
+    @apply text-black;
+}

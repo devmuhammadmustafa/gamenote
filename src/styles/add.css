@@ -1,0 +1,33 @@
+.pin-code-input {
+  position: relative;
+}
+.pin-code-helper-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  cursor: pointer;
+}
+.pin-code-helper-button svg {
+  fill: #fff;
+  width: 17px;
+}
+.pin-code-helper-block {
+  position: absolute;
+  top: 15px;
+  width: 240px;
+  right: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s ease-in-out;
+}
+.pin-code-helper-block img {
+  width: 100%;
+  border-radius: 10px;
+}
+.pin-code-helper-button:hover ~ .pin-code-helper-block{
+  opacity: 1;
+  visibility: visible;
+  transition: .2s ease-in-out;
+}

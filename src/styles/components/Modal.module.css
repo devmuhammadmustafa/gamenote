@@ -1,0 +1,93 @@
+.modal {
+  @apply fixed top-0 left-0 w-full h-screen z-[99] flex items-center justify-center px-[20px];
+
+  .closeBar {
+    @apply absolute w-full h-full bg-[#1d1d1d] opacity-70 top-0 left-0;
+  }
+
+  .modalContainer {
+    @apply relative z-[1] w-[387px] px-[30px] max-[700px]:px-[20px] pt-[26px] pb-[35px] rounded-[30px] opacity-0 -translate-y-[70px] transition duration-300;
+
+    &.largeSize {
+      @apply w-[744px];
+    }
+
+    &.active {
+      @apply transition delay-100 duration-300 opacity-100 translate-y-0;
+    }
+
+    .title {
+      @apply text-[24px] font-bold;
+    }
+
+    .closeButton {
+      @apply absolute text-[24px] top-[16px] right-[16px] transition hover:transition hover:rotate-180;
+    }
+
+    .subtitle {
+      @apply text-[12px] text-[#7d7d7d] pt-[8px];
+    }
+
+    .form {
+      @apply pt-[16px];
+
+      &.twoColumn {
+        @apply flex flex-wrap justify-between;
+      }
+
+      &.twoColumn > * {
+        @apply w-[calc(50%-15px)];
+      }
+
+      .forgotPart {
+        @apply flex justify-between mb-[30px];
+
+        .link {
+          @apply text-[14px] text-[#7CB503] hover:text-green font-semibold cursor-pointer;
+        }
+      }
+
+      .hasAccount {
+        @apply mt-[25px] text-center font-medium;
+
+        .link {
+          @apply text-[#7CB503] hover:text-green font-semibold cursor-pointer;
+        }
+      }
+    }
+  }
+
+  &.register {
+    @apply max-[700px]:px-0;
+
+    .modalContainer {
+      @apply max-[700px]:h-screen max-[700px]:overflow-auto max-[700px]:rounded-none;
+
+      .form {
+        &.twoColumn > * {
+          @apply max-[700px]:w-full;
+        }
+
+        .hasAccount {
+          @apply flex justify-center;
+        }
+      }
+    }
+  }
+
+  &.filterMode {
+    @apply block pt-[20px];
+
+    .filterModalCloseButton {
+      @apply absolute bottom-[96px] right-[20px];
+    }
+
+    .subtitle {
+      @apply p-0;
+    }
+
+    .modalContainer {
+      @apply px-0 pt-0 pb-[20px] w-full h-[calc(100%-150px)] overflow-auto;
+    }
+  }
+}
