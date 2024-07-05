@@ -13,6 +13,7 @@ import { getMetaData } from "@/pages/api/getMetaData";
 export default function ProductsPage() {
   const router = useRouter();
   const link = router.pathname + "?category=" + router.query.category;
+  console.log(link, "link");
   const dataBreadCrumb = [
     {
       link: "/",
@@ -20,10 +21,11 @@ export default function ProductsPage() {
     },
     {
       link: `${router.pathname}`,
-      text: "Aksesuarlar",
+      text: "Aksesuarlar1",
     },
     {
-      text: router.query?.name,
+      link: ``,
+      text: "router.query?.name",
     },
   ];
 
@@ -31,8 +33,6 @@ export default function ProductsPage() {
   let locale = router.locale;
   let slug = router.pathname.split("/")[1];
   const [metaData, setMetaData] = useState([]);
-
-  console.log(router.query.category);
 
   useEffect(() => {
     const handleGetMetaData = async () => {

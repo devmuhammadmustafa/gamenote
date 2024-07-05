@@ -6,17 +6,17 @@ import EmptyPanel from "@/blocks/EmptyPanel";
 import { useTranslation } from "next-i18next";
 
 export default function SearchResults({ data }) {
-    const { t } = useTranslation("common");
-    return (
-        <div className={styles.favorites}>
-            <Container>
-                <ProductListTopTexts title={t("general.search_result_title")} />
-                {data ? (
-                    <ProductList data={data} />
-                ) : (
-                    <EmptyPanel title={t("general.search_result_empty")} />
-                )}
-            </Container>
-        </div>
-    );
+  const { t } = useTranslation("common");
+  return (
+    <div className={styles.favorites}>
+      <Container>
+        <ProductListTopTexts title={t("general.search_result_title")} />
+        {data ? (
+          <ProductList data={data} />
+        ) : (
+          <EmptyPanel title={t("general.search_result_empty")} />
+        )}
+      </Container>
+    </div>
+  );
 }

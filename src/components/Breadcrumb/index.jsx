@@ -3,6 +3,8 @@ import styles from "@/styles/components/Breadcrumb.module.css";
 import Container from "@/components/Container";
 
 export default function BreadCrumb({ data }) {
+  console.log(data, "dabrea");
+
   return (
     <div className={styles.breadcrumb}>
       <Container>

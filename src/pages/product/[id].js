@@ -12,6 +12,7 @@ import { getMetaData } from "@/pages/api/getMetaData";
 import { useAtom } from "jotai";
 import { ComparisonReload, FavoriteReload } from "@/store/atoms";
 import { ProductSingle } from "@/store/atoms";
+import Loading from "../loading";
 
 export default function ProductInsidePage({ metaData, data, query, params }) {
   const { t } = useTranslation("common");
@@ -24,13 +25,21 @@ export default function ProductInsidePage({ metaData, data, query, params }) {
   let slug = router.query.id;
   const [similiarProducts, setSimiliarProducts] = useState([]);
   const [singleList, setSingleList] = useAtom(ProductSingle);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const handleGetProductInside = async () => {
-      const response = await getProductSingle(locale, slug);
-      setProductData(response?.product);
+      try {
+        setLoading(true);
+        const response = await getProductSingle(locale, slug);
+        setProductData(response?.product);
 
-      setSingleList(response?.product);
+        setSingleList(response?.product);
+      } catch (error) {
+        console.log(error, "err msg");
+      } finally {
+        setLoading(false);
+      }
     };
     handleGetProductInside();
   }, [locale, favoriteReload, comparisonReload, slug]);
@@ -55,6 +64,9 @@ export default function ProductInsidePage({ metaData, data, query, params }) {
   }, [locale, productData]);
 
   const htmlParser = new Parser();
+
+  // if (loading) return <Loading />;
+
   return (
     <>
       <Head>{htmlParser.parse(metaData?.HEADER_ASSETS)}</Head>

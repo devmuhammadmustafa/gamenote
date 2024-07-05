@@ -263,3 +263,46 @@ input[type="checkbox"]:checked + label:before {
 .fullBackground span {
   @apply !text-black;
 }
+
+/* spinner start */
+.spinner-mini {
+  width: 2.4rem;
+  height: 2.4rem;
+  animation: rotatemini 1.5s infinite linear;
+}
+
+@keyframes rotatemini {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.spinnerFullpage {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #99e000;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+}
+
+.spinner {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: conic-gradient(#0000 20%, #000);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: rotate 1.5s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* spinnermin end */

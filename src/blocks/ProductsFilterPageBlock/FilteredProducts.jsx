@@ -151,10 +151,12 @@ export default function FilteredProducts() {
     <div className={`${styles.filteredProducts} bg-white dark:bg-panel-dark`}>
       <div className={styles.titleBar}>
         <div className={styles.left}>
-          {router.pathname == "/notebooks"
-            ? t("general.notebooks_title")
+          {router.pathname == "/monitors"
+            ? t("general.monitors_title")
             : router.pathname == "/accesories"
             ? t("general.accesories_title")
+            : router.pathname == "/notebooks"
+            ? t("general.notebooks_title")
             : t("general.search_result_title")}
         </div>
         <div className={`${styles.right} filter-select`}>
